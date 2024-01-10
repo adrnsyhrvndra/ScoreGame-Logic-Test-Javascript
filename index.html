@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Papan Skor DOM</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <link rel="stylesheet" href="app.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+      <div class="scoreboard container d-flex flex-column justify-content-center">
+            <div class="row row-cols-1 row-cols-md-2 text-center py-5 justify-content-center">
+                  <div class="col col-auto py-3 points d-flex flex-column align-items-center">
+                        <h2>Home</h2>
+                        <p id="home-points" class="px-3"></p>
+      
+                        <!--score buttons pass value of button to function that changes score-->
+                        <div class="score-btns">
+                              <button class="btn btn-primary disabled" type="button" id="changeHomeScore1">+1</button>
+                              <button class="btn btn-primary disabled" type="button" id="changeHomeScore2">+2</button>
+                              <button class="btn btn-primary disabled" type="button" id="changeHomeScore3">+3</button>
+                        </div>
+                  </div>
+                  <!--/.col-->
+      
+                  <div class="col col-auto py-3 points d-flex flex-column align-items-center">
+                        <h2>Guest</h2>
+                        <p id="guest-points" class="px-3"></p>
+      
+                        <!--score buttons pass value of button to function that changes score-->
+                        <div class="score-btns">
+                              <button class="btn btn-primary disabled" type="button" id="changeGuestScore1">+1</button>
+                              <button class="btn btn-primary disabled" type="button" id="changeGuestScore2">+2</button>
+                              <button class="btn btn-primary disabled" type="button" id="changeGuestScore3">+3</button>
+                        </div>
+                  </div>
+                  <!--/.col-->
+            </div>
+            <!--/.row-->
+      
+            
+            <div class="d-grid gap-2 col-8 col-md-4 mx-auto pb-5">
+                  <select class="select-adri" name="" id="">
+                        <option value="">Pilih Maksimum Skor</option>
+                        <option value="3">Max 3+</option>
+                        <option value="5">Max 5+</option>
+                        <option value="7">Max 7+</option>
+                  </select>
+                  <h2 class="text-center">MAX : 
+                        <span id="valuedipilih">a</span>
+                  </h2>
+            </div>
+            <div class="d-grid gap-2 col-8 col-md-4 mx-auto pb-5">
+                  <button class="btn btn-primary" type="button" id="newGame">Reset Match</button>
+            </div>
+      </div>
+      <script src="app.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
